@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/main.css" rel="stylesheet">
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <script src="/app.js"></script>
+    <link rel="stylesheet" href="/main.css">
+    <title>Card Game Client</title>
+</head>
+<body>
+<div id="gameboard">
+    <div id="enemy" class="grided">
+        <div class="slot empty"></div>
+        <div class="slot empty"></div>
+        <div class="slot mana"></div>
+        <div class="slot mana"></div>
+        <div class="slot mana"></div>
+        <div class="slot mana"></div>
+        <div class="slot mana"></div>
+        <div class="slot empty"></div>
+        <div class="slot empty"></div>
+        <div class="slot empty"></div>
+        <div class="slot empty"></div>
+        <div class="slot shield"></div>
+        <div class="slot shield"></div>
+        <div class="slot shield"></div>
+        <div class="slot shield"></div>
+        <div class="slot shield"></div>
+        <div class="slot empty"></div>
+        <div class="slot empty"></div>
+        <div class="slot empty"></div>
+        <div class="slot empty"></div>
+        <div class="slot field"></div>
+        <div class="slot field"></div>
+        <div class="slot field"></div>
+        <div class="slot field"></div>
+        <div class="slot field"></div>
+        <div class="slot empty"></div>
+        <div class="slot empty"></div>
+    </div>
+    <div style="height: 5vh;"></div>
+    <div id="player" class="grided">
+        <div class="slot empty"></div>
+        <div class="slot empty"></div>
+        <div class="slot field"></div>
+        <div class="slot field"></div>
+        <div class="slot field"></div>
+        <div class="slot field"></div>
+        <div class="slot field"></div>
+        <div class="slot empty"></div>
+        <div class="slot empty"></div>
+        <div class="slot empty"></div>
+        <div class="slot empty"></div>
+        <div class="slot shield"></div>
+        <div class="slot shield"></div>
+        <div class="slot shield"></div>
+        <div class="slot shield"></div>
+        <div class="slot shield"></div>
+        <div class="slot empty deck"></div>
+        <div class="slot grave"></div>
+        <div class="slot empty"></div>
+        <div class="slot empty"></div>
+        <div class="slot mana"></div>
+        <div class="slot mana"></div>
+        <div class="slot mana"></div>
+        <div class="slot mana"></div>
+        <div class="slot mana"></div>
+        <div class="slot empty"></div>
+        <div class="slot empty"></div>
+    </div>
+</div>
+<div id="hand"></div>
+<div id="endTurn">End Turn</div>
+</body>
+</html>
