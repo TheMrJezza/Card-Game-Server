@@ -31,11 +31,11 @@ public class GameController {
 
     @MessageMapping("/message/increase-hand")
     @SendToUser("/queue/reply/receive-hand")
-    public Player increaseHand(@Payload int message, Principal principal) {
+    public List<Card> increaseHand(@Payload int message, Principal principal) {
         System.out.println(message);
         Player player = game.getPlayer(message);
         player.addCardToHand();
-        return game.getPlayer(0);
+        return player.getHand();
     }
 
     @MessageExceptionHandler
