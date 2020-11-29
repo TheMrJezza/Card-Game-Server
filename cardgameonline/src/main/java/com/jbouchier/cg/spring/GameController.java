@@ -31,9 +31,8 @@ public class GameController {
 
     @MessageMapping("/message/increase-hand")
     @SendToUser("/queue/reply/receive-hand")
-    public List<Card> increaseHand(@Payload int message, Principal principal) {
-        System.out.println(message);
-        Player player = game.getPlayer(message);
+    public List<Card> increaseHand(@Payload int playerID, Principal principal) {
+        Player player = game.getPlayer(playerID);
         player.addCardToHand();
         return player.getHand();
     }
